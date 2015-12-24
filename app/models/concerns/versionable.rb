@@ -9,6 +9,8 @@ module Versionable
     before_destroy :record_destroy
   end
 
+  private
+
   def record_create
     v = self.versions.new
     v.operation = "create"
